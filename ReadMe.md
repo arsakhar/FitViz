@@ -75,7 +75,7 @@ There are 2 logging options: UDP and CSV. CSV logging is simply writing data to 
 
 - - - -
 
-### About the code
+### About
 The idea behind this project was to provide a standalone PC application that could allow my research lab to monitor and interface with a Wahoo Kickr Snap bike trainer. In particular, we were interested in real-time measurements of speed and power to use the Kickr as an input controller for a VR game we were developing. And so my journey began to create a program that can interface with ANT+ devices.
 
 An external python package, <a href="https://github.com/half2me/libant" target="_blank">LibAnt</a>, was modified and used for the ANT+ backend communication. The inspiration for the GUI design was based on <a href="https://github.com/Wanderson-Magalhaes/Simple_PySide_Base" target="_blank">Simple Pyside Base</a>. Inspiration for UDP logging was provided by <a href="https://github.com/uwburn/cardia" target="_blank">Cardia</a>.
@@ -84,6 +84,6 @@ The app currently only supports a limited number of ANT+ device profiles. Howeve
 
 - - - -
 
-### Changelog
+### Change Log
 * v1.0.0 alpha (2020-09-05)
   * Initial release
