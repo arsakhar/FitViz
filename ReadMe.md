@@ -1,7 +1,7 @@
 # FitViz
 ## Health and fitness monitoring client for fitness enthusiasts and gamers
 
-![FitViz Banner](https://raw.githubusercontent.com/uwburn/cardia/master/Readme/cardia1small.png)
+![FitViz Banner](https://raw.githubusercontent.com/arsakhar/fitviz/master/readme/Logo.png)
 
 _Developed by Ashwin Sakhare_
 
@@ -39,7 +39,7 @@ There are 3 primary tabs on the client GUI: Networking, View, and Logging.
 
 #### Networking
 
-![Networking Tab](https://raw.githubusercontent.com/arsakhar/fitviz/master/readme/networking.png)
+![Networking Tab](https://raw.githubusercontent.com/arsakhar/fitviz/master/readme/Networking.png)
 
 The Networking tab is used to connect to ANT+ devices. 
 
@@ -51,7 +51,7 @@ The Networking tab is used to connect to ANT+ devices.
 
 #### View
 
-!View Tab](https://raw.githubusercontent.com/arsakhar/fitviz/master/readme/view.png)
+!View Tab](https://raw.githubusercontent.com/arsakhar/fitviz/master/readme/View.png)
 
 The Logging tab is used to visualize measurement data from ANT+ devices. There are 4 viewing panels allowing for up to 4 measurements to be viewed concurrently in real-time.
 
@@ -64,7 +64,7 @@ The measurement will be displayed on a gauge or LCD number UI depending on the t
 
 #### Logging
 
-![Logging Tab](https://raw.githubusercontent.com/arsakhar/fitviz/master/readme/csv.png)
+![Logging Tab](https://raw.githubusercontent.com/arsakhar/fitviz/master/readme/CSV.png)
 
 There are 2 logging options: UDP and CSV. CSV logging is simply writing data to a user-specified CSV file. For UDP logging, data is written to the specified ip address and port. The intent behind UDP is to allow for real-time data transfer to another program or device. In both cases, data is written each time a message is received.
 
