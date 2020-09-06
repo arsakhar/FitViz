@@ -1,11 +1,11 @@
 # FitViz
-## Health and fitness monitoring client for fitness enthusiasts and gamers
+## ANT+ Health and Fitness Monitoring Client
 
 ![FitViz Banner](https://raw.githubusercontent.com/arsakhar/fitviz/master/readme/Logo.png)
 
 _Developed by Ashwin Sakhare_
 
-FitViz is a monitoring client designed for fitness enthusiasts. It supports real-time visualization and tracking of health and fitness data sent from ANT+ devices. FitViz also provides networking capabilities allowing game developers to easily integrate ANT+ devices, such as bike trainers and heart rate monitors, into their own game.
+FitViz is a monitoring client designed for fitness enthusiasts and gamers. It supports real-time visualization and tracking of health and fitness data sent from ANT+ devices. FitViz also provides networking capabilities allowing game developers to easily integrate ANT+ devices, such as bike trainers and heart rate monitors, into their own game.
 
 - - - -
 
@@ -51,7 +51,7 @@ The Networking tab is used to connect to ANT+ devices.
 
 #### View
 
-!View Tab](https://raw.githubusercontent.com/arsakhar/fitviz/master/readme/View.png)
+![View Tab](https://raw.githubusercontent.com/arsakhar/fitviz/master/readme/View.png)
 
 The Logging tab is used to visualize measurement data from ANT+ devices. There are 4 viewing panels allowing for up to 4 measurements to be viewed concurrently in real-time.
 
