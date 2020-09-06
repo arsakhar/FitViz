@@ -1,7 +1,7 @@
 # FitViz
 ## ANT+ Health and Fitness Monitoring Client
 
-![FitViz Banner](../blob/master/Logo.png?raw=true/)
+![FitViz Banner](https://raw.githubusercontent.com/arsakhar/FitViz/master/readme/Logo.png?token=AJKJ6DYTD7J6XWH3QMPJTBS7LXHRO)
 
 _Developed by Ashwin Sakhare_
 
@@ -39,7 +39,7 @@ There are 3 primary tabs on the client GUI: Networking, View, and Logging.
 
 #### Networking
 
-![Networking Tab](https://github.com/arsakhar/FitViz/tree/master/readme/Networking.png)
+![Networking Tab](https://raw.githubusercontent.com/arsakhar/FitViz/master/readme/Networking.PNG?token=AJKJ6DYYPYFCCU5FLMTS7GC7LXHQI)
 
 The Networking tab is used to connect to ANT+ devices. 
 
@@ -51,7 +51,7 @@ The Networking tab is used to connect to ANT+ devices.
 
 #### View
 
-![View Tab](https://github.com/arsakhar/FitViz/tree/master/readme/View.png)
+![View Tab](https://raw.githubusercontent.com/arsakhar/FitViz/master/readme/View.PNG?token=AJKJ6D6PGS322O5LQQGOGUC7LXHO4)
 
 The Logging tab is used to visualize measurement data from ANT+ devices. There are 4 viewing panels allowing for up to 4 measurements to be viewed concurrently in real-time.
 
@@ -64,7 +64,7 @@ The measurement will be displayed on a gauge or LCD number UI depending on the t
 
 #### Logging
 
-![Logging Tab](https://github.com/arsakhar/FitViz/tree/master/readme/CSV.png)
+![Logging Tab](https://raw.githubusercontent.com/arsakhar/FitViz/master/readme/CSV.PNG?token=AJKJ6D6EH7ITDXT4DTPURUC7LXHNO)
 
 There are 2 logging options: UDP and CSV. CSV logging is simply writing data to a user-specified CSV file. For UDP logging, data is written to the specified ip address and port. The intent behind UDP is to allow for real-time data transfer to another program or device. In both cases, data is written each time a message is received.
 
