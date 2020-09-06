@@ -51,7 +51,7 @@ The Networking tab is used to connect to ANT+ devices.
 
 #### View
 
-![View Tab](https://github.com/arsakhar/fitviz/master/readme/View.png)
+![View Tab](https://raw.githubusercontent.com/arsakhar/fitviz/readme/View.png)
 
 The Logging tab is used to visualize measurement data from ANT+ devices. There are 4 viewing panels allowing for up to 4 measurements to be viewed concurrently in real-time.
 
