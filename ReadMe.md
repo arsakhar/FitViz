@@ -1,7 +1,7 @@
 # FitViz
 ## Health and fitness monitoring client for fitness enthusiasts and gamers
 
-!FitViz banner](https://raw.githubusercontent.com/uwburn/cardia/master/Readme/cardia1small.png)
+![FitViz Banner](https://raw.githubusercontent.com/uwburn/cardia/master/Readme/cardia1small.png)
 
 _Developed by Ashwin Sakhare_
 
