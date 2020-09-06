@@ -84,6 +84,6 @@ The app currently only supports a limited number of ANT+ device profiles. Howeve
 
 - - - -
 
-### Change Log
+### Changelog
 * v1.0.0 alpha (2020-09-05)
   * Initial release
