@@ -52,10 +52,7 @@ class MainWindow(QMainWindow):
     def initUI(self):
         self.setObjectName("mainWindow")
 
-        self.resize(1000,800)
-
-        # self.centralWidget = QtWidgets.QWidget(self)
-        # self.centralWidget.setObjectName("centralWidget")
+        self.resize(1000, 800)
 
         self.uiFrame = QFrame(self)
         self.uiFrame.setFrameShape(QFrame.NoFrame)
@@ -131,6 +128,7 @@ class MainWindow(QMainWindow):
         self.centralLayout.addWidget(self.spacerFrame)
         self.centralLayout.addWidget(self.ui_statusBar)
         self.centralLayout.setContentsMargins(0, 0, 0, 0)
+        self.centralLayout.setSpacing(0)
 
         self.uiLayout = QHBoxLayout(self.uiFrame)
         self.uiLayout.addWidget(self.ui_sideMenu)
