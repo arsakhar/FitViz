@@ -122,6 +122,10 @@ class ANTPanel(QWidget):
             self.centralLayout.addWidget(self.pageMeasurementsFrame)
             self.centralLayout.setContentsMargins(0, 0, 0, 0)
 
+        self.uiLayout = QHBoxLayout(self)
+        self.uiLayout.addWidget(self.centralFrame)
+        self.uiLayout.setContentsMargins(0, 0, 0, 0)
+
         self.setLayout(self.centralLayout)
 
 

@@ -54,11 +54,25 @@ class MainWindow(QMainWindow):
 
         self.resize(1000,800)
 
-        self.centralWidget = QtWidgets.QWidget(self)
-        self.centralWidget.setObjectName("centralWidget")
-        self.setCentralWidget(self.centralWidget)
+        # self.centralWidget = QtWidgets.QWidget(self)
+        # self.centralWidget.setObjectName("centralWidget")
 
-        self.contentFrame = QFrame()
+        self.uiFrame = QFrame(self)
+        self.uiFrame.setFrameShape(QFrame.NoFrame)
+        self.uiFrame.setFrameShadow(QFrame.Raised)
+        self.uiFrame.setContentsMargins(0, 0, 0, 0)
+
+        self.centralFrame = QFrame(self.uiFrame)
+        self.centralFrame.setFrameShape(QFrame.NoFrame)
+        self.centralFrame.setFrameShadow(QFrame.Raised)
+        self.centralFrame.setContentsMargins(0, 0, 0, 0)
+
+        self.spacerFrame = QFrame(self.centralFrame)
+        self.spacerFrame.setFrameShape(QFrame.NoFrame)
+        self.spacerFrame.setFrameShadow(QFrame.Raised)
+        self.spacerFrame.setContentsMargins(0, 0, 0, 0)
+
+        self.contentFrame = QFrame(self.spacerFrame)
         self.contentFrame.setFrameShape(QFrame.NoFrame)
         self.contentFrame.setFrameShadow(QFrame.Raised)
         self.contentFrame.setContentsMargins(0, 0, 0, 0)
@@ -108,24 +122,24 @@ class MainWindow(QMainWindow):
         self.contentLayout.setContentsMargins(0, 0, 0, 0)
         self.contentLayout.setCurrentIndex(self.ui_sideMenu.SCAN_BUTTON)
 
-        self.spacerLayout = QVBoxLayout(self.contentFrame)
+        self.spacerLayout = QVBoxLayout(self.spacerFrame)
         self.spacerLayout.addWidget(self.contentFrame)
         self.spacerLayout.setContentsMargins(5, 5, 5, 5)
 
-        self.centralLayout = QVBoxLayout()
+        self.centralLayout = QVBoxLayout(self.centralFrame)
         self.centralLayout.addWidget(self.ui_titleBar, alignment=Qt.AlignTop)
-        self.centralLayout.addLayout(self.spacerLayout)
+        self.centralLayout.addWidget(self.spacerFrame)
         self.centralLayout.addWidget(self.ui_statusBar)
         self.centralLayout.setContentsMargins(0, 0, 0, 0)
 
-        self.uiLayout = QHBoxLayout(self.centralWidget)
+        self.uiLayout = QHBoxLayout(self.uiFrame)
         self.uiLayout.addWidget(self.ui_sideMenu)
-        self.uiLayout.addLayout(self.centralLayout)
+        self.uiLayout.addWidget(self.centralFrame)
         self.uiLayout.setSpacing(0)
         self.uiLayout.setContentsMargins(0, 0, 0, 0)
 
-        self.setLayout(self.uiLayout)
-        self.setContentsMargins(0, 0, 0, 0)
+        self.setCentralWidget(self.uiFrame)
+        self.centralWidget().setLayout(self.uiLayout)
 
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
 

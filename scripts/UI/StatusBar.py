@@ -17,18 +17,12 @@ class StatusBar(QWidget):
         self.centralFrame = QFrame(self)
         self.centralFrame.setFrameShape(QFrame.NoFrame)
         self.centralFrame.setFrameShadow(QFrame.Raised)
+        self.centralFrame.setMinimumSize(QSize(0, 25))
+        self.centralFrame.setMaximumSize(QSize(16777215, 25))
         self.centralFrame.setContentsMargins(0, 0, 0, 0)
-        self.centralFrame.setStyleSheet("border: none;")
+        self.centralFrame.setStyleSheet(u"background-color: rgb(27, 29, 35);")
 
-        self.uiFrame = QFrame(self.centralFrame)
-        self.uiFrame.setFrameShape(QFrame.NoFrame)
-        self.uiFrame.setFrameShadow(QFrame.Raised)
-        self.uiFrame.setMinimumSize(QSize(0, 25))
-        self.uiFrame.setMaximumSize(QSize(16777215, 25))
-        self.uiFrame.setContentsMargins(0, 0, 0, 0)
-        self.uiFrame.setStyleSheet(u"background-color: rgb(27, 29, 35);")
-
-        self.labelsFrame = QFrame(self.uiFrame)
+        self.labelsFrame = QFrame(self.centralFrame)
         self.labelsFrame.setFrameShape(QFrame.NoFrame)
         self.labelsFrame.setFrameShadow(QFrame.Raised)
         self.labelsFrame.setContentsMargins(0, 0, 0, 0)
@@ -52,7 +46,7 @@ class StatusBar(QWidget):
 
         self.labelsLayout.setAlignment(Qt.AlignLeft)
 
-        self.versionFrame = QFrame(self.uiFrame)
+        self.versionFrame = QFrame(self.centralFrame)
         self.versionFrame.setFrameShape(QFrame.NoFrame)
         self.versionFrame.setFrameShadow(QFrame.Raised)
         self.versionFrame.setContentsMargins(0, 0, 0, 0)
@@ -66,7 +60,7 @@ class StatusBar(QWidget):
         self.versionLayout.setAlignment(Qt.AlignRight)
         self.versionLayout.setContentsMargins(0, 0, 20, 0)
 
-        self.gripFrame = QFrame(self.uiFrame)
+        self.gripFrame = QFrame(self.centralFrame)
         self.gripFrame.setFrameShape(QFrame.NoFrame)
         self.gripFrame.setFrameShadow(QFrame.Raised)
         self.gripFrame.setMaximumSize(QSize(20, 20))
@@ -82,18 +76,18 @@ class StatusBar(QWidget):
         self.ui_sizeGrip = QSizeGrip(self.gripFrame)
         self.ui_sizeGrip.setStyleSheet("width: 20px; height: 20px; margin 0px; padding: 0px;")
 
-        self.uiLayout = QHBoxLayout(self.uiFrame)
-        self.uiLayout.addWidget(self.labelsFrame)
-        self.uiLayout.addWidget(self.versionFrame)
-        self.uiLayout.addWidget(self.gripFrame)
-        self.uiLayout.setSpacing(0)
-        self.uiLayout.setContentsMargins(0, 0, 0, 0)
-
         self.centralLayout = QHBoxLayout(self.centralFrame)
-        self.centralLayout.addWidget(self.uiFrame)
+        self.centralLayout.addWidget(self.labelsFrame)
+        self.centralLayout.addWidget(self.versionFrame)
+        self.centralLayout.addWidget(self.gripFrame)
+        self.centralLayout.setSpacing(0)
         self.centralLayout.setContentsMargins(0, 0, 0, 0)
 
-        self.setLayout(self.centralLayout)
+        self.uiLayout = QHBoxLayout(self)
+        self.uiLayout.addWidget(self.centralFrame)
+        self.uiLayout.setContentsMargins(0, 0, 0, 0)
+
+        self.setLayout(self.uiLayout)
 
 
 class Label(QLabel):

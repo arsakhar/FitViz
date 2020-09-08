@@ -18,26 +18,21 @@ class SideMenu(QWidget):
 
     def initUI(self):
         self.centralFrame = QFrame(self)
-        self.centralFrame.setFrameShape(QFrame.NoFrame)
-        self.centralFrame.setFrameShadow(QFrame.Raised)
-        self.centralFrame.setContentsMargins(0, 0, 0, 0)
-        self.centralFrame.setStyleSheet("border: none;")
 
         self.sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         self.sizePolicy.setHorizontalStretch(0)
         self.sizePolicy.setVerticalStretch(0)
         self.sizePolicy.setHeightForWidth(self.centralFrame.sizePolicy().hasHeightForWidth())
 
-        self.uiFrame = QFrame(self.centralFrame)
-        self.uiFrame.setSizePolicy(self.sizePolicy)
-        self.uiFrame.setFrameShape(QFrame.NoFrame)
-        self.uiFrame.setFrameShadow(QFrame.Raised)
-        self.uiFrame.setMinimumSize(QSize(70, 0))
-        self.uiFrame.setMaximumSize(QSize(70, 16777215))
-        self.uiFrame.setLayoutDirection(Qt.LeftToRight)
-        self.uiFrame.setStyleSheet(u"background-color: rgb(27, 29, 35);")
+        self.centralFrame.setSizePolicy(self.sizePolicy)
+        self.centralFrame.setFrameShape(QFrame.NoFrame)
+        self.centralFrame.setFrameShadow(QFrame.Raised)
+        self.centralFrame.setMinimumSize(QSize(70, 0))
+        self.centralFrame.setMaximumSize(QSize(70, 16777215))
+        self.centralFrame.setLayoutDirection(Qt.LeftToRight)
+        self.centralFrame.setStyleSheet(u"background-color: rgb(27, 29, 35);")
 
-        self.logoFrame = QFrame(self.uiFrame)
+        self.logoFrame = QFrame(self.centralFrame)
         self.logoFrame.setFrameShape(QFrame.NoFrame)
         self.logoFrame.setFrameShadow(QFrame.Raised)
         self.logoFrame.setContentsMargins(0, 0, 0, 0)
@@ -49,7 +44,7 @@ class SideMenu(QWidget):
         self.logoLayout.setAlignment(Qt.AlignCenter)
         self.logoLayout.addWidget(self.logoWidget)
 
-        self.btnsFrame = QFrame(self.uiFrame)
+        self.btnsFrame = QFrame(self.centralFrame)
         self.btnsFrame.setFrameShape(QFrame.NoFrame)
         self.btnsFrame.setFrameShadow(QFrame.Raised)
         self.btnsFrame.setContentsMargins(0, 0, 0, 0)
@@ -73,16 +68,16 @@ class SideMenu(QWidget):
         self.btnsLayout.addWidget(self.writeBtn)
         self.btnsLayout.setContentsMargins(0, 0, 0, 0)
 
-        self.uiLayout = QVBoxLayout(self.uiFrame)
-        self.uiLayout.addWidget(self.logoFrame, stretch=.5, alignment=Qt.AlignTop)
-        self.uiLayout.addWidget(self.btnsFrame, stretch=4, alignment=Qt.AlignTop)
-        self.uiLayout.setContentsMargins(0, 0, 0, 0)
-
-        self.centralLayout = QHBoxLayout(self.centralFrame)
-        self.centralLayout.addWidget(self.uiFrame)
+        self.centralLayout = QVBoxLayout(self.centralFrame)
+        self.centralLayout.addWidget(self.logoFrame, stretch=.5, alignment=Qt.AlignTop)
+        self.centralLayout.addWidget(self.btnsFrame, stretch=4, alignment=Qt.AlignTop)
         self.centralLayout.setContentsMargins(0, 0, 0, 0)
 
-        self.setLayout(self.centralLayout)
+        self.uiLayout = QHBoxLayout(self)
+        self.uiLayout.addWidget(self.centralFrame)
+        self.uiLayout.setContentsMargins(0, 0, 0, 0)
+
+        self.setLayout(self.uiLayout)
 
 
 class MenuButton(QPushButton):
