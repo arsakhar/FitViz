@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtWidgets, QtGui
-from PyQt5.QtWidgets import QMainWindow, QSizeGrip, QStackedLayout, QFrame
+from PyQt5.QtWidgets import QMainWindow, QStackedLayout, QFrame
 from PyQt5.QtWidgets import QVBoxLayout, QHBoxLayout, QGridLayout
 from PyQt5.QtCore import Qt
 
@@ -23,8 +23,6 @@ class MainWindow(QMainWindow):
 
         # UI Status Bar. Add grip to status bar to allow for resizing window
         self.ui_statusBar = StatusBar(self)
-        self.ui_sizeGrip = QSizeGrip(self.ui_statusBar.gripFrame)
-        self.ui_sizeGrip.setStyleSheet("width: 20px; height: 20px; margin 0px; padding: 0px;")
 
         # UI Side Menu
         self.ui_sideMenu = SideMenu(self)

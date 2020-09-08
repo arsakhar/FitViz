@@ -18,22 +18,26 @@ class SideMenu(QWidget):
 
     def initUI(self):
         self.centralFrame = QFrame(self)
-
-        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.centralFrame.sizePolicy().hasHeightForWidth())
-        self.centralFrame.setSizePolicy(sizePolicy)
-
-        self.centralFrame.setMinimumSize(QSize(70, 0))
-        self.centralFrame.setMaximumSize(QSize(70, 16777215))
-
-        self.centralFrame.setLayoutDirection(Qt.LeftToRight)
-        self.centralFrame.setStyleSheet(u"background-color: rgb(27, 29, 35);")
         self.centralFrame.setFrameShape(QFrame.NoFrame)
         self.centralFrame.setFrameShadow(QFrame.Raised)
+        self.centralFrame.setContentsMargins(0, 0, 0, 0)
+        self.centralFrame.setStyleSheet("border: none;")
 
-        self.logoFrame = QFrame(self.centralFrame)
+        self.sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        self.sizePolicy.setHorizontalStretch(0)
+        self.sizePolicy.setVerticalStretch(0)
+        self.sizePolicy.setHeightForWidth(self.centralFrame.sizePolicy().hasHeightForWidth())
+
+        self.uiFrame = QFrame(self.centralFrame)
+        self.uiFrame.setSizePolicy(self.sizePolicy)
+        self.uiFrame.setFrameShape(QFrame.NoFrame)
+        self.uiFrame.setFrameShadow(QFrame.Raised)
+        self.uiFrame.setMinimumSize(QSize(70, 0))
+        self.uiFrame.setMaximumSize(QSize(70, 16777215))
+        self.uiFrame.setLayoutDirection(Qt.LeftToRight)
+        self.uiFrame.setStyleSheet(u"background-color: rgb(27, 29, 35);")
+
+        self.logoFrame = QFrame(self.uiFrame)
         self.logoFrame.setFrameShape(QFrame.NoFrame)
         self.logoFrame.setFrameShadow(QFrame.Raised)
         self.logoFrame.setContentsMargins(0, 0, 0, 0)
@@ -45,7 +49,11 @@ class SideMenu(QWidget):
         self.logoLayout.setAlignment(Qt.AlignCenter)
         self.logoLayout.addWidget(self.logoWidget)
 
-        self.btnsFrame = QFrame(self.centralFrame)
+        self.btnsFrame = QFrame(self.uiFrame)
+        self.btnsFrame.setFrameShape(QFrame.NoFrame)
+        self.btnsFrame.setFrameShadow(QFrame.Raised)
+        self.btnsFrame.setContentsMargins(0, 0, 0, 0)
+        self.btnsFrame.setStyleSheet("border: none;")
 
         self.networkBtn = MenuButton(self.btnsFrame)
         self.networkBtn.setIcon(QIcon(resource_path("icons/cil-wifi-signal-1")))
@@ -63,17 +71,18 @@ class SideMenu(QWidget):
         self.btnsLayout.addWidget(self.networkBtn)
         self.btnsLayout.addWidget(self.viewBtn)
         self.btnsLayout.addWidget(self.writeBtn)
+        self.btnsLayout.setContentsMargins(0, 0, 0, 0)
 
-        self.centralLayout = QVBoxLayout(self.centralFrame)
-        self.centralLayout.setContentsMargins(0, 0, 0, 0)
-        self.centralLayout.addWidget(self.logoFrame, stretch=.5, alignment=Qt.AlignTop)
-        self.centralLayout.addWidget(self.btnsFrame, stretch=4, alignment=Qt.AlignTop)
-
-        self.uiLayout = QHBoxLayout()
-        self.uiLayout.addWidget(self.centralFrame)
+        self.uiLayout = QVBoxLayout(self.uiFrame)
+        self.uiLayout.addWidget(self.logoFrame, stretch=.5, alignment=Qt.AlignTop)
+        self.uiLayout.addWidget(self.btnsFrame, stretch=4, alignment=Qt.AlignTop)
         self.uiLayout.setContentsMargins(0, 0, 0, 0)
 
-        self.setLayout(self.uiLayout)
+        self.centralLayout = QHBoxLayout(self.centralFrame)
+        self.centralLayout.addWidget(self.uiFrame)
+        self.centralLayout.setContentsMargins(0, 0, 0, 0)
+
+        self.setLayout(self.centralLayout)
 
 
 class MenuButton(QPushButton):

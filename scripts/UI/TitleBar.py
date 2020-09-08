@@ -21,26 +21,34 @@ class TitleBar(QWidget):
         self.resizeBtn.clicked.connect(self.resizeClicked)
 
     def initUI(self):
-        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
+        self.sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+        self.sizePolicy.setHorizontalStretch(0)
+        self.sizePolicy.setVerticalStretch(0)
 
         self.centralFrame = QFrame(self)
-        self.centralFrame.setMinimumSize(QSize(0, 40))
-        self.centralFrame.setMaximumSize(QSize(16777215, 42))
-        self.centralFrame.setStyleSheet(u"background-color: rgba(27, 29, 35, 255)")
         self.centralFrame.setFrameShape(QFrame.NoFrame)
         self.centralFrame.setFrameShadow(QFrame.Raised)
         self.centralFrame.setContentsMargins(0, 0, 0, 0)
+        self.centralFrame.setStyleSheet("border: none;")
+
+        self.uiFrame = QFrame(self.centralFrame)
+        self.uiFrame.setMinimumSize(QSize(0, 40))
+        self.uiFrame.setMaximumSize(QSize(16777215, 42))
+        self.uiFrame.setStyleSheet(u"background-color: rgba(27, 29, 35, 255)")
+        self.uiFrame.setFrameShape(QFrame.NoFrame)
+        self.uiFrame.setFrameShadow(QFrame.Raised)
+        self.uiFrame.setContentsMargins(0, 0, 0, 0)
 
         """
         Title Frame, Label, and Layout
         """
-        self.titleFrame = QFrame(self.centralFrame)
-        sizePolicy.setHeightForWidth(self.titleFrame.sizePolicy().hasHeightForWidth())
-        self.titleFrame.setSizePolicy(sizePolicy)
+        self.titleFrame = QFrame(self.uiFrame)
+        self.sizePolicy.setHeightForWidth(self.titleFrame.sizePolicy().hasHeightForWidth())
+        self.titleFrame.setSizePolicy(self.sizePolicy)
         self.titleFrame.setFrameShape(QFrame.NoFrame)
         self.titleFrame.setFrameShadow(QFrame.Raised)
+        self.titleFrame.setContentsMargins(0, 0, 0, 0)
+        self.titleFrame.setStyleSheet("border: none;")
 
         self.label = TitleBarLabel(self.titleFrame)
 
@@ -53,46 +61,43 @@ class TitleBar(QWidget):
         """
         Buttons Frame, Buttons, and Layout
         """
-        self.btnsFrame = QFrame(self.centralFrame)
-        sizePolicy.setHeightForWidth(self.btnsFrame.sizePolicy().hasHeightForWidth())
-        self.btnsFrame.setSizePolicy(sizePolicy)
+        self.btnsFrame = QFrame(self.uiFrame)
+        self.sizePolicy.setHeightForWidth(self.btnsFrame.sizePolicy().hasHeightForWidth())
+        self.btnsFrame.setSizePolicy(self.sizePolicy)
         self.btnsFrame.setMaximumSize(QSize(120, 16777215))
         self.btnsFrame.setFrameShape(QFrame.NoFrame)
         self.btnsFrame.setFrameShadow(QFrame.Raised)
         self.btnsFrame.setContentsMargins(0, 0, 0, 0)
+        self.btnsFrame.setStyleSheet("border: none;")
 
         self.minimizeBtn = MinimizeButton(self.btnsFrame)
         self.resizeBtn = ResizeButton(self.btnsFrame)
         self.closeBtn = CloseButton(self.btnsFrame)
 
         self.btnsLayout = QHBoxLayout(self.btnsFrame)
-        self.btnsLayout.setSpacing(0)
-        self.btnsLayout.setContentsMargins(0, 0, 0, 0)
-
         self.btnsLayout.addWidget(self.minimizeBtn)
         self.btnsLayout.addWidget(self.resizeBtn)
         self.btnsLayout.addWidget(self.closeBtn)
-
-        """
-        Central Layout
-        """
-        self.centralLayout = QHBoxLayout(self.centralFrame)
-        self.centralLayout.setSpacing(0)
-        self.centralLayout.setContentsMargins(0, 0, 0, 0)
-
-        self.centralLayout.addWidget(self.titleFrame)
-        self.centralLayout.addWidget(self.btnsFrame, 0, Qt.AlignRight)
+        self.btnsLayout.setSpacing(0)
+        self.btnsLayout.setContentsMargins(0, 0, 0, 0)
 
         """
         UI Layout
         """
-        self.uiLayout = QVBoxLayout()
+        self.uiLayout = QHBoxLayout(self.uiFrame)
+        self.uiLayout.addWidget(self.titleFrame)
+        self.uiLayout.addWidget(self.btnsFrame, 0, Qt.AlignRight)
+        self.uiLayout.setSpacing(0)
         self.uiLayout.setContentsMargins(0, 0, 0, 0)
 
-        self.uiLayout.addWidget(self.centralFrame)
+        """
+        Central Layout
+        """
+        self.centralLayout = QVBoxLayout(self.centralFrame)
+        self.centralLayout.addWidget(self.uiFrame)
+        self.centralLayout.setContentsMargins(0, 0, 0, 0)
 
-        self.setLayout(self.uiLayout)
-        self.setContentsMargins(0, 0, 0, 0)
+        self.setLayout(self.centralLayout)
 
     def mouseMoveEvent(self, ev):
         self.ui_main.moveWindow(ev)
