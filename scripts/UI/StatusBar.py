@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QFrame, QHBoxLayout, QLabel, QWidget, QSizeGrip
-from PyQt5.QtGui import QFont, QPalette, QBrush, QPixmap
+from PyQt5.QtGui import QFont, QPixmap
 from PyQt5.QtCore import QSize, Qt
+from PyQt5 import QtCore
 
 from scripts.Helper.Resources import *
 
@@ -65,16 +66,24 @@ class StatusBar(QWidget):
         self.gripFrame.setFrameShadow(QFrame.Raised)
         self.gripFrame.setMaximumSize(QSize(20, 20))
         self.gripFrame.setContentsMargins(0, 0, 0, 0)
-        self.gripFrame.setStyleSheet("border: none;")
 
-        path = resource_path('icons/cil-size-grip.png')
-        self.gripFrame.setStyleSheet("background-image: url(" + str(path) + "); \n"
-                                     "background-position: center; \n"
-                                     "background-repeat: no repeat")
+        # path = resource_path('icons/cil-size-grip.png')
+        # self.gripFrame.setStyleSheet("background-image: url(" + str(path) + "); \n"
+        #                              "background-position: center; \n"
+        #                              "background-repeat: no repeat")
 
 
         self.ui_sizeGrip = QSizeGrip(self.gripFrame)
         self.ui_sizeGrip.setStyleSheet("width: 20px; height: 20px; margin 0px; padding: 0px;")
+
+        self.gripLabel = QLabel(self.gripFrame)
+        self.pixmap = QPixmap(resource_path('icons/cil-size-grip.png'))
+        self.gripLabel.setPixmap(self.pixmap)
+
+        self.gripLayout = QHBoxLayout(self.gripFrame)
+        self.gripLayout.addWidget(self.gripLabel)
+        self.gripLayout.setAlignment(Qt.AlignCenter)
+        self.gripLayout.setContentsMargins(0, 0, 0, 0)
 
         self.centralLayout = QHBoxLayout(self.centralFrame)
         self.centralLayout.addWidget(self.labelsFrame)
