@@ -80,8 +80,6 @@ There are 2 logging options: UDP and CSV. CSV logging is simply writing data to 
 ### About
 The idea behind this project was to provide a standalone PC application that could allow my research lab to monitor and interface with a Wahoo Kickr Snap bike trainer. In particular, we were interested in real-time measurements of speed and power to use the Kickr as an input controller for a VR game we were developing. And so my journey began to create a program that can interface with ANT+ devices.
 
-An external python package, <a href="https://github.com/half2me/libant" target="_blank">LibAnt</a>, was modified and used for the ANT+ backend communication. The inspiration for the GUI design was based on <a href="https://github.com/Wanderson-Magalhaes/Simple_PySide_Base" target="_blank">Simple Pyside Base</a>. The gauge UI was adapted from <a href="https://github.com/StefanHol/AnalogGaugeWidgetPyQt" target="_blank">Analog Gauge Widget PyQt</a>
-
 The app currently only supports a limited number of ANT+ device profiles. However, my hope is to continue to expand on this slowly over time. This is an alpha release and I haven't performed rigorous testing yet so there are likely a number of bugs to fix. If you a spot a bug, feel free to post it under Issues.
 
 - - - -
@@ -95,3 +93,8 @@ The app currently only supports a limited number of ANT+ device profiles. Howeve
 ### Changelog
 * v1.0.0 alpha (2020-09-05)
   * Initial release
+  
+- - - -
+
+### Acknowledgements
+FitViz would not be possible without liberal imports of PyQt5, Pyusb and LibAnt. <a href="https://github.com/half2me/libant" target="_blank">LibAnt</a> was modified and used for the ANT+ backend communication. The inspiration for the GUI design was based on <a href="https://github.com/Wanderson-Magalhaes/Simple_PySide_Base" target="_blank">Simple Pyside Base</a>. The gauge UI was adapted from <a href="https://github.com/StefanHol/AnalogGaugeWidgetPyQt" target="_blank">Analog Gauge Widget PyQt</a>
