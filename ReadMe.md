@@ -1,7 +1,7 @@
 # FitViz
 ## ANT+ Health and Fitness Monitoring Client
 
-![FitViz Banner](https://raw.githubusercontent.com/arsakhar/FitViz/tree/master/readme/Logo.png?token=a9182026cd59f0f2e2b8539e1cfcdbe5dc930c51)
+![FitViz Banner](https://raw.githubusercontent.com/arsakhar/FitViz/tree/master/readme/Logo.png)
 
 _Developed by Ashwin Sakhare_
 
