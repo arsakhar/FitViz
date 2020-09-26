@@ -86,6 +86,12 @@ The app currently only supports a limited number of ANT+ device profiles. Howeve
 
 - - - -
 
+### ToDo
+- Add bluetooth connection capabilities
+- Add device profiles
+
+- - - -
+
 ### Changelog
 * v1.0.0 alpha (2020-09-05)
   * Initial release
