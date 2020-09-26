@@ -1,7 +1,7 @@
 # FitViz
 ## ANT+ Health and Fitness Monitoring Client
 
-![FitViz Banner](https://raw.githubusercontent.com/arsakhar/FitViz/master/readme/Logo.png?token=AJKJ6DYTD7J6XWH3QMPJTBS7LXHRO)
+![FitViz Banner](https://raw.githubusercontent.com/arsakhar/FitViz/master/readme/Logo.png)
 
 _Developed by Ashwin Sakhare_
 
@@ -39,7 +39,7 @@ There are 3 primary tabs on the client GUI: Networking, View, and Logging.
 
 #### Networking
 
-![Networking Tab](https://raw.githubusercontent.com/arsakhar/FitViz/master/readme/Networking.PNG?token=92c72ec38be80ead87e6fa4d5198182fff3f558c)
+![Networking Tab](https://raw.githubusercontent.com/arsakhar/FitViz/master/readme/Networking.PNG)
 
 The _Networking_ tab is used to connect to ANT+ devices. 
 
@@ -51,7 +51,7 @@ The _Networking_ tab is used to connect to ANT+ devices.
 
 #### View
 
-![View Tab](https://raw.githubusercontent.com/arsakhar/FitViz/master/readme/View.PNG?token=AJKJ6D6PGS322O5LQQGOGUC7LXHO4)
+![View Tab](https://raw.githubusercontent.com/arsakhar/FitViz/master/readme/View.PNG)
 
 The _View_ tab is used to visualize measurement data from ANT+ devices. There are 4 viewing panels allowing for up to 4 measurements to be viewed concurrently in real-time.
 
@@ -64,7 +64,7 @@ The measurement will be displayed via a gauge or LCD number depending on the typ
 
 #### Logging
 
-![Logging Tab](https://raw.githubusercontent.com/arsakhar/FitViz/master/readme/CSV.PNG?token=AJKJ6D6EH7ITDXT4DTPURUC7LXHNO)
+![Logging Tab](https://raw.githubusercontent.com/arsakhar/FitViz/master/readme/CSV.PNG)
 
 The _Logging_ tab is used to log measurement data.
 
