@@ -39,7 +39,7 @@ There are 3 primary tabs on the client GUI: Networking, View, and Logging.
 
 #### Networking
 
-![Networking Tab](https://raw.githubusercontent.com/arsakhar/FitViz/master/readme/Networking.PNG?token=AJKJ6DYYPYFCCU5FLMTS7GC7LXHQI)
+![Networking Tab](https://raw.githubusercontent.com/arsakhar/FitViz/master/readme/Networking.PNG?token=92c72ec38be80ead87e6fa4d5198182fff3f558c)
 
 The _Networking_ tab is used to connect to ANT+ devices. 
 
