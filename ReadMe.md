@@ -1,7 +1,7 @@
 # FitViz
 ## ANT+ Health and Fitness Monitoring Client
 
-![FitViz Banner](readme/Logo.png?raw=True)
+![FitViz Banner](./readme/Logo.png?raw=True)
 
 _Developed by Ashwin Sakhare_
 
@@ -39,7 +39,7 @@ There are 3 primary tabs on the client GUI: Networking, View, and Logging.
 
 #### Networking
 
-![Networking Tab](readme/Networking.PNG?raw=True)
+![Networking Tab](./readme/Networking.PNG?raw=True)
 
 The _Networking_ tab is used to connect to ANT+ devices. 
 
