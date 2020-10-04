@@ -39,7 +39,7 @@ There are 3 primary tabs on the client GUI: Networking, View, and Logging.
 
 #### Networking
 
-![Networking Tab](readme/Networking.PNG?raw=True)
+![Networking Tab](readme/Networking.png?raw=True)
 
 The _Networking_ tab is used to connect to ANT+ devices. 
 
@@ -64,7 +64,7 @@ The measurement will be displayed via a gauge or LCD number depending on the typ
 
 #### Logging
 
-![Logging Tab](readme/CSV.png/raw=True)
+![Logging Tab](readme/CSV.png?raw=True)
 
 The _Logging_ tab is used to log measurement data.
 
