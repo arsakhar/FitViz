@@ -1,7 +1,7 @@
 # FitViz
 ## ANT+ Health and Fitness Monitoring Client
 
-![FitViz Banner](/readme/Logo.PNG?raw=true)
+![FitViz Banner](readme/Logo.PNG?raw=true)
 
 _Developed by Ashwin Sakhare_
 
