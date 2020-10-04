@@ -39,7 +39,7 @@ There are 3 primary tabs on the client GUI: Networking, View, and Logging.
 
 #### Networking
 
-![Networking Tab](./readme/Networking.png?raw=True)
+![Networking Tab](./readme/Network.png?raw=True)
 
 The _Networking_ tab is used to connect to ANT+ devices. 
 
