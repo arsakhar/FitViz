@@ -39,7 +39,7 @@ There are 3 primary tabs on the client GUI: Networking, View, and Logging.
 
 #### Networking
 
-![Networking Tab](https://raw.githubusercontent.com/arsakhar/FitViz/master/readme/Networking.PNG)
+![Networking Tab](readme/Networking.PNG?raw=True)
 
 The _Networking_ tab is used to connect to ANT+ devices. 
 
@@ -51,7 +51,7 @@ The _Networking_ tab is used to connect to ANT+ devices.
 
 #### View
 
-![View Tab](https://raw.githubusercontent.com/arsakhar/FitViz/master/readme/View.PNG)
+![View Tab](readme/View.png?raw=True)
 
 The _View_ tab is used to visualize measurement data from ANT+ devices. There are 4 viewing panels allowing for up to 4 measurements to be viewed concurrently in real-time.
 
@@ -64,7 +64,7 @@ The measurement will be displayed via a gauge or LCD number depending on the typ
 
 #### Logging
 
-![Logging Tab](https://raw.githubusercontent.com/arsakhar/FitViz/master/readme/CSV.PNG)
+![Logging Tab](readme/CSV.png/raw=True)
 
 The _Logging_ tab is used to log measurement data.
 
