@@ -1,5 +1,6 @@
 .idea/
 build/
+documents/
 __pycache__/
 desktop.ini
 FitViz.spec
